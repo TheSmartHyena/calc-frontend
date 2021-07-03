@@ -1,38 +1,58 @@
-.App {
+/*W3hubs.com - Download Free Responsive Website Layout Templates designed on HTML5 CSS3,
+Bootstrap,Tailwind CSS which are 100% Mobile friendly. w3Hubs all Layouts are responsive cross browser supported,
+best quality world class designs.*/
+body {
+  box-sizing: border-box;
+  overflow-x: hidden;
+  font-family: 'Lato', sans-serif;
+}
+
+.col-3 {
+  padding: 0 !important;
+}
+.col-6 {
+  padding: 0 !important;
+}
+
+.col-9 {
+  padding: 0 !important;
+}
+
+button,
+textarea {
+  border-radius: 0px !important;
+  font-size: 24px !important;
+}
+
+button {
+  width: 100%;
   text-align: center;
+  padding-top: 15px !important;
+  padding-bottom: 15px !important;
+  outline: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.btn-primary:focus,
+.btn-primary,
+.form-control:focus {
+  box-shadow: none !important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.col-xs-6 button {
+  width: 150px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.form-control:nth-child(1) {
+  height: 150px;
 }
 
-.App-link {
-  color: #61dafb;
+.form-group {
+  margin-bottom: 0px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card-body{
+  padding-left: 2rem !important;
+  padding-right: 2rem !important;
+  padding-top: 1rem !important;
+  padding-bottom: 1rem !important;
 }
