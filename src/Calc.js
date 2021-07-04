@@ -1,11 +1,13 @@
 import {Helmet} from "react-helmet";
 import { Button, Container, Row, Col, Card, Form } from 'react-bootstrap';
-import axios from 'axios';
+import axios from "axios";
 import { useState } from "react";
 
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './Calc.css';
-axios.defaults.headers.post['Content-Type'] = 'application/json';
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./Calc.css";
+axios.defaults.headers.post["Content-Type"] = "application/json";
+const apiUrl = "https://red-loon-48470.herokuapp.com";
+// const apiUrl = "http://localhost:8080";
 
 const Calc = () => {
 
@@ -13,7 +15,7 @@ const Calc = () => {
   const [previousCalc, setPreviousCalc] = useState("");
 
   const handleSend = async () => {
-    const result = await axios.post(`http://127.0.0.1/calc`, {calculus: currentCalc});
+    const result = await axios.post(`${apiUrl}/calc`, {calculus: currentCalc});
     setPreviousCalc(currentCalc + " = " + result.data.result);
     setCurrentCalc(result.data.result);
   };
