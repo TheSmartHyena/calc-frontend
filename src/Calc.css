@@ -45,6 +45,7 @@ button {
 
 .form-control {
   width: 100%;
+  /*direction: rtl;*/
 }
 
 .inputs-body{
@@ -75,4 +76,9 @@ button {
   outline: none !important;
   box-shadow: none !important;  
   border-color: #ced4da !important;
+}
+
+.history-card:hover {
+  background: lightgrey; 
+  cursor: pointer;
 }
