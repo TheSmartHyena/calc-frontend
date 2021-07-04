@@ -1,3 +1,4 @@
+import {Helmet} from "react-helmet";
 import { Button, Container, Row, Col, Card, Form } from 'react-bootstrap';
 import axios from 'axios';
 import { useState } from "react";
@@ -12,7 +13,7 @@ const Calc = () => {
   const [previousCalc, setPreviousCalc] = useState("");
 
   const handleSend = async () => {
-    const result = await axios.post(`http://localhost:8080/calc`, {calculus: currentCalc});
+    const result = await axios.post(`http://127.0.0.1/calc`, {calculus: currentCalc});
     setPreviousCalc(currentCalc + " = " + result.data.result);
     setCurrentCalc(result.data.result);
   };
@@ -32,22 +33,27 @@ const Calc = () => {
 
   return (
     <div className="Calc">
+      <Helmet>
+        <title>Calculator</title>
+        <meta name="description" content="Calc application" />
+      </Helmet>
+
       <Container>
         <Row>
-          <Col centered>
-            <h1 class="display-4" >Simple calculator</h1>
+          <Col>
+            <h1 className="display-4 text-center" >Simple calculator</h1>
           </Col>
         </Row>
         <Row>
           <Card style={{ width: '18rem' }} centered>
             <Card.Body>
-              <div class="inputs-body">
+              <div className="inputs-body">
                 <Card.Text>
                   <Form.Control type="text" value={previousCalc} readOnly/>
                   <Form.Control type="text" value={currentCalc} readOnly/>
                 </Card.Text>
               </div>
-              <div class="buttons-body">
+              <div className="buttons-body">
                 <Card.Text>
                   <Row>
                     <Col xs={6} ><Button onClick={() => resetChars()} variant="outline-secondary">C</Button>{' '}</Col>
