@@ -69,4 +69,13 @@ button {
   margin-bottom: 10px; /* Added */
 }
 
+.btn:focus {
+  outline: none !important;
+  box-shadow: none !important;  
+}
 
+.form-control:focus {
+  outline: none !important;
+  box-shadow: none !important;  
+  border-color: #ced4da !important;
+}
