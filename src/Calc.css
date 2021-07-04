@@ -42,17 +42,31 @@ button {
   width: 150px;
 }
 
-.form-control:nth-child(1) {
-  height: 150px;
+.form-control:nth-child(2) {
+  height: 5em;
 }
 
-.form-group {
-  margin-bottom: 0px;
+.form-control {
+  width: 100%;
 }
 
-.card-body{
-  padding-left: 2rem !important;
-  padding-right: 2rem !important;
-  padding-top: 1rem !important;
+.inputs-body{
   padding-bottom: 1rem !important;
 }
+
+.buttons-body{
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+}
+
+.h1 {
+  text-align: center;
+}
+
+.card {
+  margin: 0 auto; /* Added */
+  float: none; /* Added */
+  margin-bottom: 10px; /* Added */
+}
+
+
