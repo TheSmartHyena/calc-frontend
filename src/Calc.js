@@ -7,8 +7,7 @@ import HistoryItem from "./HistoryItem";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Calc.css";
 axios.defaults.headers.post["Content-Type"] = "application/json";
-const apiUrl = "https://red-loon-48470.herokuapp.com";
-// const apiUrl = "http://localhost:8080";
+const apiUrl = process.env.PORT ? "https://red-loon-48470.herokuapp.com" : "http://localhost:8080";
 
 const Calc = () => {
 
