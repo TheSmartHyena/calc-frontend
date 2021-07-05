@@ -18,7 +18,7 @@ const Calc = () => {
 
   const handleSend = async () => {
     // Avoid useless send to api
-    if (currentCalc === 'ERROR' || currentCalc === '') {
+    if (currentCalc.includes('ERROR') > 0 || currentCalc === '') {
       resetChars();
       return;
     }
